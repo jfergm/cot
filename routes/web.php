@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\QuotationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::get('/', function () {
 
 Route::get('/contacto', [ContactController::class, 'index']);
 Route::post('/contacto', [ContactController::class, 'sendEmail']);
+
+Route::get('/cotiza', [QuotationController::class, 'index']);
+Route::get('/cotizar_ajax', [QuotationController::class, 'quotizer']);
